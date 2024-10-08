@@ -23,7 +23,7 @@ for m:=-1 to 1 do
             nbBombes:=nbBombes+1;
 end;
 
-procedure remplirNbBombes(var grille: tab)
+procedure remplirNbBombes(var grille: tab);
 var i,j, bombes:Integer;
 begin
 for i:=1 to MAX do 
