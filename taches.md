@@ -1,3 +1,3 @@
-- [x] création grille : samuel
+- [-] création grille : samuel
 - [ ] déplacement crt : titouan
 - [ ] affichage grille/gérer affichage 1 seul case : paul
