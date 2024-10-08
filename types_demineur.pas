@@ -16,7 +16,7 @@ Type curseur = record
   x, y : Integer;
 end;
 
-Type grille = array [1..MAX,1..MAX] of cases;
+Type tab = array [1..MAX,1..MAX] of cases;
 
 Implementation
 end.
