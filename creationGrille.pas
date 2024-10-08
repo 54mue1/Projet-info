@@ -2,12 +2,10 @@ program creationGrille;
 
 uses types_demineur;
 var grille : tab;
-	i, j, h : Integer;
-
-//on met 12 mines
+	i, j, minePlace : Integer;
 
 BEGIN
-for i := 1 to MAX do
+for i := 1 to MAX do      //on initialise la grille vide
 	for j := 1 to MAX do
 		begin
 			grille[i][j].estAffiche := False;
@@ -15,10 +13,16 @@ for i := 1 to MAX do
 			grille[i][j].drapeau := False;
 		end;
 Randomize;
-for h := 1 to 12 do 
-	i := random(MAX)
-	j := random(MAX)
+minePlace := 0;
+repeat                  //on place les 12 mines au hasard
+	i := random(MAX);
+	j := random(MAX);
+	if not grille[i][j].mine then
+		begin
+			grille[i][j].mine := True;
+			minePlace := minePlace + 1;
+		end;
+until minePlace = 12;
 
 	
 END.
-
