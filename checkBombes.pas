@@ -19,7 +19,7 @@ begin
 nbBombes:=0;
 for m:=-1 to 1 do
     for n:=-1 to 1 do
-        if grille[i+m][j+n].mine then
+        if grille[i+m,j+n].mine then
             nbBombes:=nbBombes+1;
 end;
 
