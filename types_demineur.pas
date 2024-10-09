@@ -1,10 +1,15 @@
-
 unit types_demineur;
 
 Interface
 
 
 Const  MAX=8;
+HAUT=#72;
+BAS=#80;
+GAUCHE=#75;
+DROITE=#77;
+ENTREE=#13;
+NB_BOMBES=11;
 
 Type 
 	cases = record
