@@ -17,9 +17,15 @@ begin
 			for j:= 1 to MAX do
 				begin 
 					if grille[i][j].estAffiche then
-						write(grille[i][j].nbMinesAutour)
+						begin	
+							write(grille[i][j].nbMinesAutour);
+							write(' ');
+						end
 					else
-						write('□');
+						begin
+							write('□');
+							write(' ');
+						end;
 				end;
 			writeln();
 		end;
