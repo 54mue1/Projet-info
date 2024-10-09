@@ -1,10 +1,17 @@
-program creationGrille;
+unit creationGrille;
+
+interface
 
 uses types_demineur;
 var grille : tab;
 	i, j, minePlace : Integer;
+	
+procedure creeGrille(var grille:tab);
 
-BEGIN
+Implementation
+
+procedure creeGrille(var grille:tab);
+begin
 for i := 1 to MAX do      //on initialise la grille vide
 	for j := 1 to MAX do
 		begin
@@ -22,7 +29,7 @@ repeat                  //on place les 12 mines au hasard
 			grille[i][j].mine := True;
 			minePlace := minePlace + 1;
 		end;
-until minePlace = 12;
-
+until minePlace = NB_BOMBES;
+end;
 	
 END.
