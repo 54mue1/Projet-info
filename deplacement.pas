@@ -8,7 +8,7 @@ procedure deplacer(var curs : curseur);
 
 procedure devoiler(curs: curseur; var grille : tab);
 
-
+procedure drapeau(curs : curseur; var grille : tab);
 
 Implementation
 
@@ -31,4 +31,12 @@ begin
 touche:=READKEY;
 	If touche= ENTREE then grille[curs.x][curs.y].estAffiche:=True; // rends la case sur laquelle est le curseur dévoilable
 end;
+
+procedure drapeau(curs : curseur; var grille: tab);
+var touche : char;
+begin
+touche:=READKEY;
+	If touche= ENTREE then grille[curs.x][curs.y].drapeau:=True; // pose un drapeau sur la case pointée par le curseur
+end;
+
 end.
