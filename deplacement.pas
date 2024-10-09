@@ -36,7 +36,7 @@ procedure drapeau(curs : curseur; var grille: tab);
 var touche : char;
 begin
 touche:=READKEY;
-	If touche= ENTREE then grille[curs.x][curs.y].drapeau:=True; // pose un drapeau sur la case pointée par le curseur
+	If touche= INSER then grille[curs.x][curs.y].drapeau:=True; // pose un drapeau sur la case pointée par le curseur
 end;
 
 end.
