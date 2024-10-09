@@ -4,29 +4,30 @@ Interface
 
 uses types_demineur;
 
-procedure checkCaseAutour(i,j:Integer; var grille: tab; nbBombes:Integer);
+procedure checkCaseAutour(i,j:Integer; var grille: tab);
 procedure remplirNbBombes(var grille: tab);
 
 
 Implementation	
 
-procedure checkCaseAutour(i,j:Integer; var grille: tab; nbBombes:Integer);
-var m,n:Integer;
+procedure checkCaseAutour(i,j:Integer; var grille: tab);
+var m,n,nbBombes:Integer;
 begin
+nbBombes:=0;
 for m:=-1 to 1 do
-    for n:=-1 to 1 do
-        if grille[i+m,j+n].mine then
-            nbBombes:=nbBombes+1;
+	for n:=-1 to 1 do
+		if grille[i+m,j+n].mine then
+			nbBombes:=nbBombes+1;
+grille[i,j].nbMinesAutour:=nbBombes;
 end;
 
 
 procedure remplirNbBombes(var grille: tab);
-var i,j, bombes:Integer;
+var i,j:Integer;
 begin
-bombes:=0;
 for i:=1 to MAX do 
   for j:=1 to MAX do 
-    checkCaseAutour(i,j,grille,bombes);
+    checkCaseAutour(i,j,grille);
 end;
 
 end.
