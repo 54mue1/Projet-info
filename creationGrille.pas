@@ -22,7 +22,7 @@ for i := 1 to MAX do      //on initialise la grille vide
 Randomize;
 minePlace := 0;
 repeat                  //on place les 12 mines au hasard
-	i := random(MAX);
+	i := random(MAX+1);
 	j := random(MAX);
 	if not grille[i][j].mine then
 		begin
