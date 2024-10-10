@@ -7,8 +7,39 @@ uses types_demineur,crt;
 var i,j,k : Integer;
 
 procedure affiche(grille:tab;curs:curseur);
-
+procedure affichecase(grille : tab);
 implementation
+
+procedure affichecase(grille:tab);
+begin
+	if grille[i][j].estAffiche then
+		 begin
+			if grille[i][j].mine then
+				begin
+				TextColor(12);
+				write('☼');
+			    write(' ');
+				end
+			else
+				begin
+				TextColor(6);
+				write(grille[i][j].nbMinesAutour);
+				write(' ');
+				end
+			end
+		else if grille[i][j].drapeau then
+			begin	
+			TextColor(12);
+			write('♥');
+			write(' ');
+			end
+		else
+			begin
+			TextColor(2);
+			write('□');
+			write(' ');
+			end;
+end;
 
 procedure affiche(grille:tab;curs:curseur);
 begin
@@ -16,34 +47,18 @@ begin
 		begin
 			for j:= 1 to MAX do
 				begin 
-					if grille[i][j].estAffiche then
-						begin	
-							TextColor(6);
-							write(grille[i][j].nbMinesAutour);
-							write(' ');
-						end
-					else if grille[i][j].drapeau then
-						begin	
-							TextColor(12);
-							write('♥');
-							write(' ');
+					if (j=curs.x) and (i=curs.y) then
+						begin
+						TextBackground(1);
+						affichecase(grille);
+						TextBackground(0);
 						end
 					else
-						begin
-							TextColor(2);
-							write('□');
-							write(' ');
-						end;
+						affichecase(grille);
 				end;
 			writeln();
 		end;
-	TextColor(10);
-	ClrScr;
-	GotoXY((curs.x)*2,(curs.y)*2);
-	if grille[i][j].estAffiche then
-		write(grille[i][j].nbMinesAutour)
-	else
-		write('□');
 end;
+
 end.
 
