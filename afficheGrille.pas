@@ -26,8 +26,8 @@ begin
 				write(grille[i][j].nbMinesAutour);
 				write(' ');
 				end
-			end
-		else if grille[i][j].drapeau then
+		end
+	else if grille[i][j].drapeau then
 			begin	
 			TextColor(12);
 			write('♥');
