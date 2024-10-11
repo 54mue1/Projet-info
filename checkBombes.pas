@@ -14,7 +14,7 @@ procedure checkCaseAutour(i,j:Integer; var grille: tab); // compte le nombre de 
 var m,n,nbBombes:Integer;
 begin
 nbBombes:=0;
-if j=1 then //comptage bombes autour des cases de la ligne du haut
+if j=1 then //comptage bombes autour des cases de la colonne gauche
 	begin
 		if i=1 then // case haut gauche
 			begin
@@ -25,7 +25,7 @@ if j=1 then //comptage bombes autour des cases de la ligne du haut
 				if grille[i+1,j+1].mine then
 					nbBombes:=nbBombes+1;
 			end
-		else if i=MAX then // case haut droit
+		else if i=MAX then // case bas gauche
 			 begin
 				if grille[i-1,j].mine then
 					nbBombes:=nbBombes+1;
@@ -48,7 +48,7 @@ if j=1 then //comptage bombes autour des cases de la ligne du haut
 					nbBombes:=nbBombes+1;
 			 end
 	end
-else if i=1 then //comptage bombes autour des cases de la colonne de gauche
+else if i=1 then //comptage bombes autour des cases de la première ligne
 	begin
 			if grille[i,j-1].mine then
 				nbBombes:=nbBombes+1;
@@ -61,9 +61,9 @@ else if i=1 then //comptage bombes autour des cases de la colonne de gauche
 			if grille[i+1,j+1].mine then
 				nbBombes:=nbBombes+1;
 	end
-else if j=MAX then //comptage bombes autour des cases de la ligne du bas
+else if j=MAX then //comptage bombes autour des cases de la colonne droite
 	begin
-		if i=1 then // case bas gauche
+		if i=1 then // case haut droit
 			begin
 				if grille[i,j-1].mine then
 					nbBombes:=nbBombes+1;
@@ -95,7 +95,7 @@ else if j=MAX then //comptage bombes autour des cases de la ligne du bas
 					nbBombes:=nbBombes+1;
 			end
 	end
-else if i=MAX then //comptage bombes autour des cases de la colonne de droite
+else if i=MAX then //comptage bombes autour des cases de la dernière ligne
 	begin
 			if grille[i,j-1].mine then
 				nbBombes:=nbBombes+1;
