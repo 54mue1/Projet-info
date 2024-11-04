@@ -18,23 +18,21 @@ for i := 1 to MAX do
 			begin 
 				
 				if ((grille[i-1,j-1].nbMinesAutour = 0) and not(grille[i-1,j-1].estAffiche)) then  //notifie si on a un zero autour de la case qui n'est pas dévoilé
-					k := k+1;
+					k := 1;
 				if ((grille[i,j-1].nbMinesAutour = 0) and not(grille[i,j-1].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i+1,j-1].nbMinesAutour = 0) and not(grille[i+1,j-1].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i-1,j].nbMinesAutour = 0) and not(grille[i-1,j].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i+1,j].nbMinesAutour = 0) and not(grille[i+1,j].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i-1,j+1].nbMinesAutour = 0) and not(grille[i-1,j+1].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i,j+1].nbMinesAutour = 0) and not(grille[i,j+1].estAffiche)) then
-					k := k+1;
+					k := 1;
 				if ((grille[i+1,j+1].nbMinesAutour = 0) and not(grille[i+1,j+1].estAffiche)) then
-					k := k+1;
-				
-				writeln(k);
+					k := 1;
 					
 				grille[i-1,j-1].estAffiche:= True; //dévoile toutes les cases autour 
 				grille[i,j-1].estAffiche:= True;
