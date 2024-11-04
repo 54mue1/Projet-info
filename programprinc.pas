@@ -1,6 +1,6 @@
 program demineur;
 
-uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zeros;
+uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zero;
 
 var grille:tab;
 curs : curseur;
@@ -12,9 +12,10 @@ creeGrille(grille);
 remplirNbBombes(grille);
 repeat
 clrscr;
-//zeros(grille);
+zeros(grille);
 
 affiche(grille,curs);
 deplacer(curs,grille);
 until j=10 ;
 end.
+
