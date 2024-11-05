@@ -15,10 +15,10 @@ repeat
 clrscr;
 zeros(grille1);
 zeros(grille2);
-affiche(grille,curs,XGRILLE1,YGRILLE);
-affiche(grille,curs,XGRILLE2,YGRILLE);
-deplacer(curs,grille);
-
+affiche(grille1,curs,XGRILLE1,YGRILLE);
+affiche(grille2,curs,XGRILLE2,YGRILLE);
+deplacer(curs,grille1);
+deplacer(curs,grille2);
 
 until finDePartie(grille1) or finDePartie(grille2) ;
 clrscr;
