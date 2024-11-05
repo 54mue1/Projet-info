@@ -20,7 +20,7 @@ affiche(grille,curs,XGRILLE2,YGRILLE);
 deplacer(curs,grille);
 
 
-until finDePartie(grille);
+until finDePartie(grille1) or finDePartie(grille2) ;
 clrscr;
 write('PERDU LOOSER'); ;
 end.
