@@ -11,6 +11,9 @@ DROITE=#77;
 ENTREE=#13;
 INSER=#82;
 NB_BOMBES=11;
+XGRILLE1=20;
+YGRILLE=10;
+XGRILLE2=40;
 
 Type 
 	cases = record
@@ -23,6 +26,7 @@ Type curseur = record
 end;
 
 Type tab = array [1..MAX,1..MAX] of cases;
+
 
 Implementation
 end.
