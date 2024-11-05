@@ -14,8 +14,11 @@ repeat
 clrscr;
 zeros(grille);
 
-affiche(grille,curs);
+affiche1(grille,curs);
+affiche2(grille,curs);
 deplacer(curs,grille);
+
+
 until j=10 ;
 end.
 
