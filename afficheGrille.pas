@@ -6,8 +6,8 @@ uses types_demineur,crt;
 
 var i,j,k : Integer;
 
-procedure affiche1(grille:tab;curs:curseur);
-procedure affiche2(grille:tab;curs:curseur);
+procedure affiche(grille:tab;curs:curseur;debutx,debuty:Integer);
+
 procedure affichecase(grille : tab);
 implementation
 
@@ -42,9 +42,9 @@ begin
 			end;
 end;
 
-procedure affiche1(grille:tab;curs:curseur);
+procedure affiche(grille:tab;curs:curseur;debutx,debuty:Integer);
 begin
-gotoxy(XGRILLE1,YGRILLE);
+gotoxy(debutx,debuty);
 	for i := 1 to MAX do 
 		begin
 			for j:= 1 to MAX do
@@ -59,31 +59,10 @@ gotoxy(XGRILLE1,YGRILLE);
 						affichecase(grille);
 				end;
 			writeln();
-			gotoxy(XGRILLE1,YGRILLE-i);
+			gotoxy(debutx,debuty-i);
 		end;
 end;
 
-procedure affiche2(grille:tab;curs:curseur);
-begin
-gotoxy(XGRILLE2,YGRILLE);
-	for i := 1 to MAX do 
-		begin
-			for j:= 1 to MAX do
-				begin 
-					if (j=curs.x) and (i=curs.y) then
-						begin
-						TextBackground(1);
-						affichecase(grille);
-						TextBackground(0);
-						end
-					else
-						affichecase(grille);
-				end;
-			writeln();
-			gotoxy(XGRILLE2,YGRILLE-i);
-			
-		end;
-end;
+
 
 end.
-
