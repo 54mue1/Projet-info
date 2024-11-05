@@ -15,8 +15,8 @@ repeat
 clrscr;
 zeros(grille1);
 zeros(grille2);
-affiche1(grille1,curs);
-affiche2(grille2,curs);
+affiche(grille,curs,XGRILLE1,YGRILLE);
+affiche(grille,curs,XGRILLE2,YGRILLE);
 deplacer(curs,grille);
 
 
