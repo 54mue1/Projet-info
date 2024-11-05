@@ -1,11 +1,10 @@
 program demineur;
 
-uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zero;
+uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zero,finPartie;
 
 var grille1, grille2:tab;
 curs : curseur;
 begin
-j:=0;
 curs.x:=1;
 curs.y:=1;
 creeGrille(grille1);
@@ -21,6 +20,8 @@ affiche2(grille2,curs);
 deplacer(curs,grille);
 
 
-until j=10 ;
+until finDePartie(grille);
+clrscr;
+write('PERDU LOOSER'); ;
 end.
 
