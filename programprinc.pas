@@ -27,7 +27,6 @@ end.
 
 //plus tard on aura : 
 
-
 program demineur;
 
 uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zero,finPartie;
@@ -49,11 +48,11 @@ zeros(grille1);
 zeros(grille2);
 affiche(grille1,curs1,XGRILLE1,YGRILLE);
 affiche(grille2,curs2,XGRILLE2,YGRILLE);
-deplacer1(curs1,grille1);
-deplacer2(curs2,grille2);
+deplacer(curs1,curs2,grille1,grille2);
 
 
 until finDePartie(grille1) or finDePartie(grille2);
 clrscr;
 write('PERDU LOOSER'); ;
 end.
+
