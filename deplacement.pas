@@ -17,8 +17,8 @@ var touche:char;
 begin
     touche := READKEY;
     case touche of
-        HAUT: if curs.y > 1 then curs.y := curs.y - 1;  // déplacement haut
-        BAS: if curs.y < MAX then curs.y := curs.y + 1;  // déplacement bas
+        HAUT:  if curs.y < MAX then curs.y := curs.y + 1;// déplacement haut
+        BAS: if curs.y > 1 then curs.y := curs.y - 1;  // déplacement bas
         GAUCHE: if curs.x > 1 then curs.x := curs.x - 1;  // déplacement gauche
         DROITE: if curs.x < MAX then curs.x := curs.x + 1;  // déplacement droite
         ENTREE: if not(grille[curs.y][curs.x].estAffiche) then grille[curs.y][curs.x].estAffiche:=True; // rends la case sur laquelle est le curseur dévoilable
@@ -32,8 +32,8 @@ var touche:char;
 begin
     touche := READKEY;
     case touche of
-        z: if curs.y > 1 then curs.y := curs.y - 1;  // déplacement haut
-        S: if curs.y < MAX then curs.y := curs.y + 1;  // déplacement bas
+        z: if curs.y < MAX then curs.y := curs.y + 1;  // déplacement haut
+        S: if curs.y > 1 then curs.y := curs.y - 1;  // déplacement bas
         Q: if curs.x > 1 then curs.x := curs.x - 1;  // déplacement gauche
         D: if curs.x < MAX then curs.x := curs.x + 1;  // déplacement droite
         A: if not(grille[curs.y][curs.x].estAffiche) then grille[curs.y][curs.x].estAffiche:=True; // rends la case sur laquelle est le curseur dévoilable
