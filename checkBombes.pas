@@ -48,19 +48,6 @@ if j=1 then //comptage bombes autour des cases de la colonne gauche
 					nbBombes:=nbBombes+1;
 			 end
 	end
-else if i=1 then //comptage bombes autour des cases de la première ligne
-	begin
-			if grille[i,j-1].mine then
-				nbBombes:=nbBombes+1;
-			if grille[i,j+1].mine then
-				nbBombes:=nbBombes+1;
-			if grille[i+1,j-1].mine then
-				nbBombes:=nbBombes+1;
-			if grille[i+1,j].mine then
-				nbBombes:=nbBombes+1;
-			if grille[i+1,j+1].mine then
-				nbBombes:=nbBombes+1;
-	end
 else if j=MAX then //comptage bombes autour des cases de la colonne droite
 	begin
 		if i=1 then // case haut droit
@@ -94,6 +81,19 @@ else if j=MAX then //comptage bombes autour des cases de la colonne droite
 				if grille[i+1,j].mine then
 					nbBombes:=nbBombes+1;
 			end
+	end
+ else if i=1 then //comptage bombes autour des cases de la première ligne
+	begin
+			if grille[i,j-1].mine then
+				nbBombes:=nbBombes+1;
+			if grille[i,j+1].mine then
+				nbBombes:=nbBombes+1;
+			if grille[i+1,j-1].mine then
+				nbBombes:=nbBombes+1;
+			if grille[i+1,j].mine then
+				nbBombes:=nbBombes+1;
+			if grille[i+1,j+1].mine then
+				nbBombes:=nbBombes+1;
 	end
 else if i=MAX then //comptage bombes autour des cases de la dernière ligne
 	begin
