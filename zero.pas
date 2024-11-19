@@ -61,7 +61,7 @@ for i := 1 to MAX do
 								grille[i+1,j+1].estAffiche:= True;
 							end
 					end
-				else if i=1 then //colonne droite
+				else if j=MAX then //colonne droite
 					begin
 						if i=1 then//case haut droit 
 							begin
@@ -102,6 +102,7 @@ for i := 1 to MAX do
 								grille[i-1,j].estAffiche:= True;
 								grille[i-1,j-1].estAffiche:= True;
 								grille[i,j-1].estAffiche:= True;
+								grille[i+1,j-1].estAffiche:= True;
 								grille[i+1,j].estAffiche:= True;
 							end
 						end
@@ -172,6 +173,10 @@ for i := 1 to MAX do
 			end;
 until k = 0;
 	
+end;
+
+end.
+
 end;
 
 end.
