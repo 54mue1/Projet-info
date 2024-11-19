@@ -20,7 +20,7 @@ M=#50;
 I=#23;
 P=#25;
 
-NB_BOMBES=11; //nombre de bombes dans une grille
+NB_BOMBES=1; //nombre de bombes dans une grille
 //emplacement dans le terminal :
 XGRILLE1=20;
 YGRILLE=10;
