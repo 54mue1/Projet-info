@@ -5,6 +5,7 @@ uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,
 var grille1, grille2:tab;
 curs1,curs2 : curseur;
 begin
+Randomize;
 curs1.x:=1;
 curs1.y:=1;
 curs2.x:=1;
