@@ -19,11 +19,11 @@ for i := 1 to MAX do      //on initialise la grille vide
 			grille[i][j].mine := False;
 			grille[i][j].drapeau := False;
 		end;
-Randomize;
+
 minePlace := 0;
 repeat                  //on place les 12 mines au hasard
-	i := random(MAX+1);
-	j := random(MAX);
+	i := random(MAX) + 1 ;
+	j := random(MAX) + 1;
 	if not grille[i][j].mine then
 		begin
 			grille[i][j].mine := True;
