@@ -1,10 +1,11 @@
 program demineur;
 
-uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement,crt,zero,finPartie,DOS;
+uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement, crt, zero, finPartie, vainqueur, DOS;
 
 var grille1, grille2:tab;
 curs1,curs2 : curseur;
 HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin:Word;
+T1, T2, G1, G2: Boolean; // T=terminé, G=gagné
 begin
 GetTime(HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb);
 Randomize;
@@ -23,12 +24,11 @@ zeros(grille2);
 affiche(grille1,curs1,XGRILLE1,YGRILLE);
 affiche(grille2,curs2,XGRILLE2,YGRILLE);
 deplacer(curs1,curs2,grille1,grille2);
-
-
-until finDePartie(grille1) or finDePartie(grille2);
+finDePartie(grille1,T1,G1);
+finDePartie(grille2,T2,G2);
+until T1 or T2;
 GetTime(HeureFin,MinuteFin,SecondeFin,CentiemeFin);
 clrscr;
-write('La partie à durée :',Minutefin-MinuteDeb,' minutes, ', SecondeFin-SecondeDeb ,' secondes et ',CentiemeFin-CentiemeDeb,' centiemes');
-write('PERDU LOOSER'); ;
+writeln('La partie à durée :',Minutefin-MinuteDeb,' minutes, ', SecondeFin-SecondeDeb ,' secondes et ',CentiemeFin-CentiemeDeb,' centiemes');
+victoire(T1, T2, G1, G2);
 end.
-
