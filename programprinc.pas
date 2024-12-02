@@ -28,7 +28,7 @@ deplacer(curs1,curs2,grille1,grille2);
 until finDePartie(grille1) or finDePartie(grille2);
 GetTime(HeureFin,MinuteFin,SecondeFin,CentiemeFin);
 clrscr;
-write('La partie à durée :',MinuteDeb-MinuteFin,' minutes, ', SecondeDeb-SecondeFin ,' secondes et ',CentiemeDeb-CentiemeFin,' centiemes');
+write('La partie à durée :',Minutefin-MinuteDeb,' minutes, ', SecondeFin-SecondeDeb ,' secondes et ',CentiemeFin-CentiemeDeb,' centiemes');
 write('PERDU LOOSER'); ;
 end.
 
