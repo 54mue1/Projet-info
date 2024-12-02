@@ -2,27 +2,33 @@ unit finPartie ;
 
 Interface
 
-uses types_demineur,crt;
+uses types_demineur;
 
-function finDePartie(grille : tab):BOOLEAN;
+procedure finDePartie(grille : tab;var estTermine, estGagne: Boolean);
 
 Implementation	
 
 
-function finDePartie(grille : tab): BOOLEAN;
+procedure finDePartie(grille : tab;var estTermine, estGagne: Boolean);
 var i,j,k:integer;
 begin
 k:=0;
-for i := 1 to MAX do      
+for i := 1 to MAX do      // partie perdu
 	for j := 1 to MAX do
 		if grille[i][j].estAffiche and grille[i][j].mine then
-			finDePartie:=TRUE;
-for i := 1 to MAX do      
+			begin
+			estTermine:=TRUE;
+			estGagne:=False;
+			end;
+for i := 1 to MAX do      // partie gagnée
 	for j := 1 to MAX do
 		if grille[i][j].estAffiche  then
 			k:=k+1;
 If k=MAX*MAX-NB_BOMBES then
-	finDePartie:=TRUE
+	begin
+	estTermine:=TRUE;
+	estGagne:=True
+	end;
 end;
 
 end.
