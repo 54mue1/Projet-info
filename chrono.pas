@@ -28,7 +28,7 @@ begin
 		end
 	else
 		seconde:=SecondeFin-SecondeDeb;		
-writeln('La partie à durée :',minute,' minutes et ', seconde ,' secondes');
+writeln('La partie à durée : ',minute,' minutes et ', seconde ,' secondes');
 tempsEnSecondes:=minute*60+seconde;
 end;
 end.
