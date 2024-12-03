@@ -29,6 +29,6 @@ finDePartie(grille2,T2,G2);
 until T1 or T2;
 GetTime(HeureFin,MinuteFin,SecondeFin,CentiemeFin);
 clrscr;
-writeln('La partie à durée :',Minutefin-MinuteDeb,' minutes, ', SecondeFin-SecondeDeb ,' secondes et ',CentiemeFin-CentiemeDeb,' centiemes');
+TimeDiff(HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin,seconde);
 victoire(T1, T2, G1, G2);
 end.
