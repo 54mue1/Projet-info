@@ -1,10 +1,10 @@
 program demineur;
 
-uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement, crt, zero, finPartie, vainqueur, DOS;
+uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement, crt, zero, finPartie, vainqueur, DOS, chrono;
 
 var grille1, grille2:tab;
 curs1,curs2 : curseur;
-HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin:Word;
+HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin,seconde:Word;
 T1, T2, G1, G2: Boolean; // T=terminé, G=gagné
 begin
 GetTime(HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb);
