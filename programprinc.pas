@@ -1,12 +1,15 @@
 program demineur;
 
-uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement, crt, zero, finPartie, vainqueur, DOS, chrono;
+uses types_demineur,checkBombes, creationGrille, afficheGrille, deplacement, crt, zero, finPartie, vainqueur, DOS, chrono,menu;
 
 var grille1, grille2:tab;
+j1,j2: String;
 curs1,curs2 : curseur;
 HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin,seconde:Word;
 T1, T2, G1, G2: Boolean; // T=terminé, G=gagné
+
 begin
+lancermenu(j1,j2);
 GetTime(HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb);
 Randomize;
 curs1.x:=1;
