@@ -11,7 +11,7 @@ procedure affiche(grille:tab;curs:curseur;debutx,debuty:Integer);
 procedure affichecase(grille : tab);
 implementation
 
-procedure affichecase(grille:tab);
+procedure affichecase(grille:tab); //gestion de l'affichage de la case en fonction de sa "condition"
 begin
 	if grille[i][j].estAffiche then
 		 begin
@@ -42,14 +42,14 @@ begin
 			end;
 end;
 
-procedure affiche(grille:tab;curs:curseur;debutx,debuty:Integer);
+procedure affiche(grille:tab;curs:curseur;debutx,debuty:Integer); //permet d'afficher l'entièreté de la grille
 begin
 gotoxy(debutx,debuty);
 	for i := 1 to MAX do 
 		begin
 			for j:= 1 to MAX do
 				begin 
-					if (j=curs.x) and (i=curs.y) then
+					if (j=curs.x) and (i=curs.y) then //permet d'afficher le curseur en changeant la couleur de fond
 						begin
 						TextBackground(1);
 						affichecase(grille);
