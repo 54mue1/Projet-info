@@ -70,3 +70,4 @@ begin
     WriteLn('Temps enregistré. Meilleur temps actuel : ', meilleurTemps, ' secondes.');
 end;
 
+end.
