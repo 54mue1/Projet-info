@@ -37,7 +37,7 @@ writeln('E : Poser un drapeau');
 writeln();
 writeln(j2,' jouera avec :');
 writeln('O : Aller en haut');
-writeln('K : Aller en bas ');
+writeln('L : Aller en bas ');
 writeln('K : Aller à gauche ');
 writeln('M : Aller à droite');
 writeln('I : Dévoiler une case');
