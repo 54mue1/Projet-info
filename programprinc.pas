@@ -29,7 +29,7 @@ affiche(grille2,curs2,XGRILLE2,YGRILLE);
 deplacer(curs1,curs2,grille1,grille2);// prends en compte les déplacements
 finDePartie(grille1,T1,G1);// regarde si la partie est terminée
 finDePartie(grille2,T2,G2);
-until T1 or T2;// On répète ces actions jusqu'à ce que la partie soit terminée
+until T1 or T2 or G1 or G2;// On répète ces actions jusqu'à ce que la partie soit terminée
 GetTime(HeureFin,MinuteFin,SecondeFin,CentiemeFin);
 clrscr;
 TimeDiff(HeureDeb,MinuteDeb,SecondeDeb,CentiemeDeb,HeureFin,MinuteFin,SecondeFin,CentiemeFin,seconde);
@@ -37,4 +37,3 @@ victoire(T1, T2, G1, G2);
 If G1 or G2 then // ne prends en compte un score que si le joueur a gagné sa grille, et pas si l'autre est tombé trop rapidement sur une bombe
 enregistrerScore(seconde);
 end.
-
