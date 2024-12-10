@@ -2,7 +2,7 @@ unit gestionscores;
 
 Interface 
 
-uses SysUtils;
+uses crt,SysUtils;
 
 
 const
@@ -23,6 +23,7 @@ var
   ligne: string;
   meilleurTemps, tempsActuel: LongInt;
   estMeilleur: Boolean;
+  i : Integer;
 begin
   meilleurTemps := MaxInt; // Initialiser avec la valeur maximale possible
   estMeilleur := False;
@@ -65,7 +66,14 @@ begin
 
   // Affichage du meilleur temps avec annonce si record battu ou non 
   if estMeilleur then
+    begin
     WriteLn('Nouveau record battu ! Meilleur temps : ', meilleurTemps, ' secondes.')
+    for i := 1 to 100 do
+      begin
+        Beep;      // Produit un son 
+        delay(10); // Petit délai entre chaque beep
+      end;
+    end
   else
     WriteLn('Temps enregistré. Meilleur temps actuel : ', meilleurTemps, ' secondes.');
 end;
