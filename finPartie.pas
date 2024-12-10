@@ -26,8 +26,8 @@ for i := 1 to MAX do      // partie gagnée
 			k:=k+1;
 If k=MAX*MAX-NB_BOMBES then
 	begin
-	estTermine:=TRUE;
-	estGagne:=True
+	estTermine:=False;
+	estGagne:=True;
 	end;
 end;
 
