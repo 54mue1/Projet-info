@@ -5,7 +5,7 @@ uses  crt;
 var j1,j2 : string;
 procedure affichedecompte(chaine : String); // va permettre d'afficher le décompte
 procedure lancermenu(var j1,j2: String) ;
- 
+procedure pageaccueil();
  
 Implementation
 procedure affichedecompte(chaine:String);
@@ -16,9 +16,17 @@ write(chaine);
 delay(1000);
 end;
 
+procedure pageaccueil();
+begin
+
+
+end;
 
 procedure lancermenu(var j1,j2 : String);
 begin
+pageaccueil();
+delay(6000);
+clrscr();
 Textcolor(15);
 writeln('Entrez le nom du premier joueur (il sera à gauche):');
 readln(j1);
