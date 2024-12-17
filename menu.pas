@@ -19,12 +19,17 @@ end;
 procedure pageaccueil();
 begin
 TextColor(138);
-goto
+gotoxy(17,9);
              writeln('  ____    ____   __  __  ____   ______   _____  ');
+gotoxy(17,10);     
              writeln(' |  _ \  / __ \ |  \/  ||  _ \ |  ____| |  __ \ ');
+gotoxy(17,11); 
              writeln(' | |_) || |  | || \  / || |_) || |__    | |__) |');
+gotoxy(17,12); 
              writeln(' |  _ < | |  | || |\/| ||  _ < |  __|   |  _  / ');
+gotoxy(17,13); 
              writeln(' | |_) || |__| || |  | || |_) || |____  | | \ \ ');
+gotoxy(17,14); 
              writeln(' |____/  \____/ |_|  |_||____/ |______| |_|  \_\');
 end;
 
