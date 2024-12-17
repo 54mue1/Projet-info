@@ -18,8 +18,12 @@ end;
 
 procedure pageaccueil();
 begin
-
-
+             writeln('  ____   ____   __  __  ____   ______   _____  ');
+             writeln(' |  _ \ / __ \ |  \/  ||  _ \ |  ____| |  __ \ ');
+             writeln(' | |_) | |  | || \  / || |_) || |__    | |__) |');
+             writeln(' |  _ <| |  | || |\/| ||  _ < |  __|   |  _  / ');
+             writeln(' | |_) | |__| || |  | || |_) || |____  | | \ \ ');
+             writeln(' |____/ \____/ |_|  |_||____/ |______| |_|  \_\');
 end;
 
 procedure lancermenu(var j1,j2 : String);
