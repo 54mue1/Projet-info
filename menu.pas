@@ -18,6 +18,8 @@ end;
 
 procedure pageaccueil();
 begin
+TextColor(10);
+TextColor(16);
              writeln('  ____   ____   __  __  ____   ______   _____  ');
              writeln(' |  _ \ / __ \ |  \/  ||  _ \ |  ____| |  __ \ ');
              writeln(' | |_) | |  | || \  / || |_) || |__    | |__) |');
